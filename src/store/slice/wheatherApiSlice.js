@@ -1,6 +1,7 @@
 import {createSlice} from '@reduxjs/toolkit'
 
 import {fetchWeatherByCoords} from '../thunks/fetchWeatherByCoords'
+import {fetchWeatherByName} from '../thunks/fetchWeatherByName';
 
 
 
@@ -8,6 +9,7 @@ import {fetchWeatherByCoords} from '../thunks/fetchWeatherByCoords'
 const initialState = {
   weatherStatusFull : [],
   currentLocation : [],
+  currentLocationByName: [],
 };
 
 export const allWeatherApis = createSlice ({
@@ -25,6 +27,9 @@ export const allWeatherApis = createSlice ({
     builder
     .addCase(fetchWeatherByCoords.fulfilled, (state, action) => {
       state.currentLocation = action.payload
+    })
+    .addCase(fetchWeatherByName.fulfilled, (state, action) => {
+      state.currentLocationByName = action.payload
     })
   }
 });

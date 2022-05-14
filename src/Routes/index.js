@@ -1,7 +1,8 @@
 import React from "react";
 import {BrowserRouter, Route, Routes} from "react-router-dom"
 
-import {Main}  from '../pages/main'
+import {Main}  from '../pages/main';
+import { InformationIndex } from "../pages/information";
 
 const RoutesApp = () => {
 
@@ -10,8 +11,8 @@ const RoutesApp = () => {
     <>
     <BrowserRouter>
       <Routes>
-          <Route path="/" element={<Main/>}/>
-          <Route path="" element={<></>}/>
+          <Route path="/Main" element={<Main/>}/>
+          <Route path="/" element={< InformationIndex/>}/>
           <Route path="/*" element={<></>}/>
       </Routes>
     </BrowserRouter>
