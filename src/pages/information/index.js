@@ -1,6 +1,7 @@
 import React from "react";
 
-import { Header } from "./components/header/Header";
+import { Header } from "./components/header";
+import { BodyInformation } from "./components/bodyweather";
 
 
 const InformationIndex = () => {
@@ -9,6 +10,7 @@ const InformationIndex = () => {
   return (
     <>
     <Header/>
+    <BodyInformation/>
     </>
   )
 }

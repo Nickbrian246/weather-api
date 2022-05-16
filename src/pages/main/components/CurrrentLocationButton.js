@@ -2,7 +2,9 @@ import React from "react";
 import { Button } from 'antd';
 
 import { useDispatch } from "react-redux";
-import { fetchWeatherByCoords } from "../../../store/thunks/fetchWeatherByCoords";
+
+import { fetchWeatherByName } from "../../../store/thunks/mainThunks/fetchWeatherByName";
+// import { fetchWeatherByCoords } from "../../../store/thunks/mainThunks/fetchWeatherByCoords";
 // import { setCurrentLocation } from "../../../store/slice/wheatherApiSlice";
 
 
@@ -14,23 +16,11 @@ if (!"geolocation" in navigator){
   return alert("tu navegador no tiene geolocalizacion")
 }
 
-// const onUbicationConcedida= ubicacion => {
-//   console.log( "ubicationsssss" , ubicacion);
-//   // dispatch(setCurrentLocation(ubicacion));
-// }
-//   const error = err => {
-//   console.log("errr  obtenitneo la " , err)
-// }
-
-// const opcinesDeSolicitud = {
-// enableHighAccuracy: true,
-//   maximumAge: 0,
-//   timeout: 5000,
-// }
   navigator.geolocation.getCurrentPosition(
     ({coords}) => {
     const userCoords = ([coords.latitude, coords.longitude])
-      dispatch(fetchWeatherByCoords(userCoords));
+      // dispatch(fetchWeatherByCoords(userCoords));
+      dispatch(fetchWeatherByName(userCoords));
       console.log(userCoords)
     },
     (err) => {

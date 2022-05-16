@@ -5,11 +5,14 @@ import App from './App';
 
 import { configureStore } from '@reduxjs/toolkit';
 import { Provider } from 'react-redux';
-import weatherReducer from '../src/store/slice/wheatherApiSlice';
+
+import weatherReducer from '../src/store/slice/mainSlices/wheatherApiSlice';
+import informationReducer from '../src/store/slice/informationSlice/informationSlice';
 
 const store = configureStore ( {
   reducer : {
     weatherApi: weatherReducer,
+    informationApiCallMain: informationReducer,
   }
 }) 
 

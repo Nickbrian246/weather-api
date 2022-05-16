@@ -1,7 +1,7 @@
 import {createSlice} from '@reduxjs/toolkit'
 
-import {fetchWeatherByCoords} from '../thunks/fetchWeatherByCoords'
-import {fetchWeatherByName} from '../thunks/fetchWeatherByName';
+import {fetchWeatherByCoords} from '../../thunks/mainThunks/fetchWeatherByCoords'
+import {fetchWeatherByName} from '../../thunks/mainThunks/fetchWeatherByName';
 
 
 

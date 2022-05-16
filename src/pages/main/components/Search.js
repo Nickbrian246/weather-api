@@ -7,7 +7,7 @@ import { Alert } from 'antd';
 
 import { useDispatch } from "react-redux";
 import { useSelector } from "react-redux";
-import { fetchWeatherByName } from "../../../store/thunks/fetchWeatherByName";
+import { fetchWeatherByName } from "../../../store/thunks/mainThunks/fetchWeatherByName";
 
 
 const { Search } = Input;
